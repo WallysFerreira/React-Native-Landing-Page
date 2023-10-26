@@ -19,6 +19,7 @@ const ContainerFrente = props => {
   )
 }
 
+// Telas principais
 function Home({ navigation }) {
   return (
     <ContainerFundo>
@@ -73,11 +74,16 @@ function Formacao() {
   )
 }
 
-function Projetos() {
+function Projetos({ navigation }) {
   return (
     <ContainerFundo>
       <ContainerFrente>
-        <Text>Projetos</Text>
+        <Pressable
+          title="Desfile Tech"
+          onPress={() => navigation.navigate('DesfileTech')}
+        >
+          <Text>Desfile Tech Rec'n'Play</Text>
+        </Pressable>
       </ContainerFrente>
     </ContainerFundo>
   )
@@ -88,6 +94,17 @@ function Habilidades() {
     <ContainerFundo>
       <ContainerFrente>
         <Text>Habilidades</Text>
+      </ContainerFrente>
+    </ContainerFundo>
+  )
+}
+
+// Telas dos projetos
+function DesfileTech() {
+  return (
+    <ContainerFundo>
+      <ContainerFrente>
+        <Text>Desfile Tech....</Text>
       </ContainerFrente>
     </ContainerFundo>
   )
@@ -104,6 +121,7 @@ export default function App() {
         <Stack.Screen name="Formacao" component={Formacao}></Stack.Screen>
         <Stack.Screen name="Projetos" component={Projetos}></Stack.Screen>
         <Stack.Screen name="Habilidades" component={Habilidades}></Stack.Screen>
+        <Stack.Screen name="DesfileTech" component={DesfileTech}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );
