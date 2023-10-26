@@ -118,7 +118,18 @@ function Habilidades() {
   return (
     <ContainerFundo>
       <ContainerFrente>
-        <Text>Habilidades</Text>
+        <View>
+          <Text style={styles.textoTitulo}>Linguagens e Frameworks</Text>
+          <Text style={styles.textoParagrafo}>Java, C#, Python, JavaScript, C/C++, React, Spring, ASP .NET</Text>
+        </View>
+        <View>
+          <Text style={styles.textoTitulo}>Bancos de Dados</Text>
+          <Text style={styles.textoParagrafo}>PostgreSQL, MySQL, MongoDB, Redis</Text>
+        </View>
+        <View>
+          <Text style={styles.textoTitulo}>DevOps</Text>
+          <Text style={styles.textoParagrafo}>Azure, Docker, Kubernetes, GitHub Actions, Linux</Text>
+        </View>
       </ContainerFrente>
     </ContainerFundo>
   )
