@@ -84,6 +84,20 @@ function Projetos({ navigation }) {
         >
           <Text>Desfile Tech Rec'n'Play</Text>
         </Pressable>
+
+        <Pressable
+          title="Banco Imobiliario"
+          onPress={() => navigation.navigate('BancoImobiliario')}
+        >
+          <Text>Banco Imobiliario</Text>
+        </Pressable>
+
+        <Pressable
+          title="MatchInk"
+          onPress={() => navigation.navigate('MatchInk')}
+        >
+          <Text>MatchInk</Text>
+        </Pressable>
       </ContainerFrente>
     </ContainerFundo>
   )
@@ -112,6 +126,26 @@ diferenciada. Usado no festival Rec’n’Play 2022 e 2023</Text>
   )
 }
 
+function BancoImobiliario() {
+  return (
+    <ContainerFundo>
+      <ContainerFrente>
+        <Text style={styles.textoParagrafo}>Banco Imobiliario</Text>
+      </ContainerFrente>
+    </ContainerFundo>
+  )
+}
+
+function MatchInk() {
+  return (
+    <ContainerFundo>
+      <ContainerFrente>
+        <Text style={styles.textoParagrafo}>MatchInk</Text>
+      </ContainerFrente>
+    </ContainerFundo>
+  )
+}
+
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -123,7 +157,10 @@ export default function App() {
         <Stack.Screen name="Formacao" component={Formacao}></Stack.Screen>
         <Stack.Screen name="Projetos" component={Projetos}></Stack.Screen>
         <Stack.Screen name="Habilidades" component={Habilidades}></Stack.Screen>
+
         <Stack.Screen name="DesfileTech" component={DesfileTech}></Stack.Screen>
+        <Stack.Screen name="BancoImobiliario" component={BancoImobiliario}></Stack.Screen>
+        <Stack.Screen name="MatchInk" component={MatchInk}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );
