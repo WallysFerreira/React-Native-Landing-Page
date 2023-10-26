@@ -141,7 +141,9 @@ function BancoImobiliario() {
   return (
     <ContainerFundo>
       <ContainerFrente>
-        <Text style={styles.textoParagrafo}>Banco Imobiliario</Text>
+        <Text style={styles.textoParagrafo}>Aplicativo android que substitui o dinheiro do jogo Banco Imobiliario permitindo que o jogador
+use um código QR ou sua cor no jogo para se identificar, substituindo o dinheiro do jogo. Construı́do com Kotlin,
+Jetpack Compose e o kit de Machine Learning do Google.</Text>
       </ContainerFrente>
     </ContainerFundo>
   )
@@ -151,7 +153,9 @@ function MatchInk() {
   return (
     <ContainerFundo>
       <ContainerFrente>
-        <Text style={styles.textoParagrafo}>MatchInk</Text>
+        <Text style={styles.textoParagrafo}>Aplicação web que conecta tatuadores e clientes. Participei do desenvolvimento back-end criando CRUD
+para cadastro de usuários e estúdios de tatuagem usando Spring Boot e MongoDB. Ajudei meus colegas na criação
+do front-end em Next.JS por meio de revisão de código.</Text>
       </ContainerFrente>
     </ContainerFundo>
   )
