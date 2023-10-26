@@ -104,7 +104,9 @@ function DesfileTech() {
   return (
     <ContainerFundo>
       <ContainerFrente>
-        <Text>Desfile Tech....</Text>
+        <Text style={styles.textoParagrafo}>Projeto que integra tecnologia e moda, usando Arduino para construir adereços para roupas e decorações
+para passarela que permitem que os espectadores interajam com o desfile e que as modelos vivam uma experiência
+diferenciada. Usado no festival Rec’n’Play 2022 e 2023</Text>
       </ContainerFrente>
     </ContainerFundo>
   )
@@ -147,5 +149,9 @@ const styles = StyleSheet.create({
   textoTitulo: {
     fontSize: 36,
     fontWeight: 'bold',
+  },
+
+  textoParagrafo: {
+    color: 'white',
   }
 });
