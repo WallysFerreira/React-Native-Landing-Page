@@ -3,10 +3,26 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Pressable } from 'react-native';
 
-function Home({ navigation }) {
+const ContainerFundo = props => {
   return (
     <View style={styles.containerFundo}>
-      <View style={styles.containerFrente}>
+      {props.children}
+    </View>
+  )
+}
+
+const ContainerFrente = props => {
+  return (
+    <View style={styles.containerFrente}>
+      {props.children}
+    </View>
+  )
+}
+
+function Home({ navigation }) {
+  return (
+    <ContainerFundo>
+      <ContainerFrente>
         <Text style={styles.textoTitulo}>Wallys Ferreira</Text>
         <Pressable
           title="Sobre"
@@ -32,40 +48,48 @@ function Home({ navigation }) {
         >
           <Text>Habilidades</Text>
         </Pressable>
-      </View>
-    </View>
+      </ContainerFrente>
+    </ContainerFundo>
   )
 }
 
 function Sobre() {
   return (
-    <View>
-      <Text>Sobre</Text>
-    </View>
+    <ContainerFundo>
+      <ContainerFrente>
+        <Text>Sobre</Text>
+      </ContainerFrente>
+    </ContainerFundo>
   )
 }
 
 function Formacao() {
   return (
-    <View>
-      <Text>Formação</Text>
-    </View>
+    <ContainerFundo>
+      <ContainerFrente>
+        <Text>Formação</Text>
+      </ContainerFrente>
+    </ContainerFundo>
   )
 }
 
 function Projetos() {
   return (
-    <View>
-      <Text>Projetos</Text>
-    </View>
+    <ContainerFundo>
+      <ContainerFrente>
+        <Text>Projetos</Text>
+      </ContainerFrente>
+    </ContainerFundo>
   )
 }
 
 function Habilidades() {
   return (
-    <View>
-      <Text>Habilidades</Text>
-    </View>
+    <ContainerFundo>
+      <ContainerFrente>
+        <Text>Habilidades</Text>
+      </ContainerFrente>
+    </ContainerFundo>
   )
 }
 
