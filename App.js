@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Pressable } from 'react-native';
+import { StyleSheet, Text, View, Pressable, Image } from 'react-native';
 
 const ContainerFundo = props => {
   return (
@@ -25,6 +25,7 @@ function Home({ navigation }) {
     <ContainerFundo>
       <ContainerFrente>
         <Text style={styles.textoTitulo}>Wallys Ferreira</Text>
+        
         <Pressable
           title="Sobre"
           onPress={() => navigation.navigate('Sobre')}
@@ -58,7 +59,13 @@ function Sobre() {
   return (
     <ContainerFundo>
       <ContainerFrente>
-        <Text>Sobre</Text>
+        <Image
+          source={require('./assets/foto.jpg')}
+          style={{height: 220, width: 220}}
+        />
+        <Text style={styles.textoParagrafo}>Estudante de Análise e Desenvolvimento de Sistemas na Faculdade Senac Pernambuco apaixonado pelo mundo do desenvolvimento de software e ansioso para contribuir ativamente em um ambiente profissional.</Text>
+        <Text style={styles.textoParagrafo}>Possuo forte interesse no desenvolvimento web com foco especial no back-end e em soluções em nuvem, apesar de também me sentir confortavel no desenvolvimento fullstack. Minha formação sólida em linguagens e tecnologias, como C#, Java, React e Docker, me permitiu adquirir experiência prática no desenvolvimento de aplicações web baseadas em microserviços. Desde a concepção do sistema até a implantação na nuvem, estive envolvido em todas as etapas do processo.</Text>
+        <Text style={styles.textoParagrafo}>Além do meu compromisso acadêmico, mantenho ativa a minha busca por aprendizado e crescimento. Contribuir para projetos open-source e me envolver em iniciativas de extensão tecnológica são maneiras pelas quais continuo a aprimorar minhas habilidades e a oferecer valor à comunidade de desenvolvedores.</Text>
       </ContainerFrente>
     </ContainerFundo>
   )
@@ -68,7 +75,11 @@ function Formacao() {
   return (
     <ContainerFundo>
       <ContainerFrente>
-        <Text>Formação</Text>
+        <View>
+          <Text style={styles.textoParagrafo}>Técnologo em Análise e Desenvolvimento de Sistemas</Text>
+          <Text style={styles.textoParagrafo}>Faculdade Senac Pernambuco</Text>
+          <Text style={styles.textoParagrafo}>Inicio: 2022  Previsão de Conclusão: 2024</Text>
+        </View>
       </ContainerFrente>
     </ContainerFundo>
   )
